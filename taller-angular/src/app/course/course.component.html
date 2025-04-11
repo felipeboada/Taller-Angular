@@ -1,26 +1,25 @@
-<div class = "container-fluid">
-    <div class = "col-6">
-        <table class = "table">
-            <thead>
-                <tr>
-                    <th class = "h4">Course's Name</th>
-                    <th class = "h4">professor's Name</th>
-                    <th class = "h4">Credits</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor = "let course of courses">
-                    <td>
-                        <dd>{{course.name}}</dd>
-                    </td>
-                    <td>
-                        <dd>{{course.professor}}</dd>
-                    </td>
-                    <td>
-                        <dd>{{course.credits}}</dd>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+<div class = "container mt-4">
+    <h2 class = "text-center mb-4">Lista de series</h2>
+
+    <table class = "table table-striped table-bordered">
+        <thead class = "table-dark">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Canal</th>
+                <th>Temporadas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courses">
+                <td>{{ course.id }}</td>
+                <td><a href = "course.paginaweb" target = "_blank">{{ course.name }}</a></td>
+                <td>{{ course.channel }}</td>
+                <td>{{ course.seasons }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class = "d-flex justify-content-start mt-3">
+        <p class="fw-bold">Promedio de temporadas: {{ promedioTemporadas | number: '1.1-1'}}</p>
     </div>
 </div>

@@ -1,11 +1,9 @@
 export class Course {
-    name: String;
-    professor: String;
-    credits: Number;
-
-    public constructor(name: String, professor: String, credits: Number) {
-        this.name = name;
-        this.professor = professor;
-        this.credits = credits;
-    }
+    constructor(
+        public id: number,
+        public name: string,
+        public channel: string,
+        public seasons: number,
+        public webpage: string
+    ){ }
 }
